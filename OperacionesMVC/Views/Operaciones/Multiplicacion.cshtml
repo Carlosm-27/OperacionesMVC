@@ -1,0 +1,59 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Multiplicación</title>
+    <link href="~/asset/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
+            <a class="navbar-brand" href="#">Operaciones</a>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="~/Operaciones/Suma">Suma <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="~/Operaciones/Resta">Resta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="~/Operaciones/Division">División</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="~/Operaciones/Multiplicacion">Multiplicación</a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+
+
+        <form method="post" action="multiplicacion" class="w-50 mx-auto mt-5 mb-5">
+            <label> Valor 1 </label> <br />
+            <input type="text" name="txtvalor1" class="form-control" /> <br />
+            <label> Valor 2 </label> <br />
+            <input type="text" name="txtvalor2" class="form-control" /> <br />
+            <input type="submit" value="Restar" class="btn btn-success btn-block" />
+        </form>
+
+        <div class="mt-5 w-50 m-auto bg-primary p-3">
+            <label class="font-weight-bold mr-2">Valor 1 : </label> @Model.variableA<br />
+            <label class="font-weight-bold mr-2">Valor 2 : </label>@Model.variableB <br />
+            <label class="font-weight-bold mr-2">Resultado de la multiplicación : </label> @Model.resultado
+        </div>
+
+    </div>
+
+    <script src="~/asset/js/bootstrap.min.js"></script>
+    <script src="~/asset/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="~/asset/js/popper.min.js"></script>
+</body>
+</html>
